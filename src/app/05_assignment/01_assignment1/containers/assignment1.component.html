@@ -1,0 +1,36 @@
+<div class="assignment1">
+  <div class="alert alert-info">Follow the steps:</div>
+  <ul class="list-group">
+    <li class="list-group-item">Create an input of type "text"</li>
+    <li class="list-group-item">
+      Attach a template reference variable to the input
+    </li>
+    <li class="list-group-item">
+      Attach an "input" event passing in the value of textbox to the handler
+    </li>
+    <li class="list-group-item">Create handler in the component's class</li>
+    <li class="list-group-item">
+      Display the result on the page via string interpolation
+    </li>
+  </ul>
+  <div class="container your-code">
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="inputGroup-sizing-default"
+          >Enter Text :</span
+        >
+      </div>
+      <input
+        type="text"
+        #inputRef
+        class="form-control"
+        (input)="inputHandler(inputRef.value)"
+      />
+    </div>
+    <div>
+      <h3>
+        <span class="badge badge-info">{{ dataToShow }}</span>
+      </h3>
+    </div>
+  </div>
+</div>
